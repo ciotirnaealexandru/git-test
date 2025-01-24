@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first project</title>
     <link href="styles.css" rel="stylesheet">
+    <script src="javascript.js" defer></script>
 </head>
 <body>
     <h1>Homepage</h1>
     <a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About the Odin Project</a>
     <a href="pages/about.html">About</a>
-    <h2>Am inceput Odin Project</h1>
+    <h2>Am inceput Odin Project</h2>
     <p>Uite mi primul paragraf</p>
     <strong>Uite l pe al doilea</strong>
     <!-- comentariuuuuuuu-->
@@ -28,5 +29,30 @@
         <div class="two"></div>
         <div class="three"></div>
     </div>
+
+    <!-- PENTRU DOM MANIPULATION-->
+    <div id="container"></div>
+    <button onclick="alert('Hello World')">Click Me</button>
+    <button id="btn">NO, click me!!</button>
+    <button id="btn2">Click me too..</button>
+
+    <section>
+        <img src="images/dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p class="mozilla">Here we will add a link to the <a class = "dino" href="https://www.mozilla.org/">Mozilla homepage</a></p>
+    </section>
+    <script>
+        const link = document.querySelector(".dino");
+        link.textContent = "Mozilla Developer Network";
+        link.href = "https://developer.mozilla.org";
+
+        const sect = document.querySelector("section");
+        const initialpara = document.querySelector(".mozilla");
+        const para = document.createElement("p");
+        para.textContent = "We hope you enjoyed the ride!";
+        sect.insertBefore(para, initialpara);
+
+        const text = document.createTextNode(" — the premier source for web development knowledge.");
+        sect.append(text, para);
+    </script>
 </body>
 </html>
