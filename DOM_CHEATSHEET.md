@@ -62,8 +62,3 @@ div.style.backgroundColor;
 
 // bracket notation with kebab-case: also works
 div.style["background-color"];
-
-
-## EVENTS
-
-#
